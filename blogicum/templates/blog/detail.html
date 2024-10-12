@@ -1,0 +1,32 @@
+{% extends 'base.html' %}
+{% load static %}
+
+    <!-- Формируется из локации и даты -->
+{% block title %}{{ post.location }}. {{ post.date|date:'d M Y'}}{% endblock %}
+
+{% block content %}
+      <div class="container py-5">
+        <article>
+          <ul>
+            <li>
+              Место: {{ post.location }}
+            </li>
+            <li>
+              Дата: {{ post.date }}
+            </li>
+            <li>
+              Категория: <a href="not-my-day">{{ post.category }}</a>
+            </li>
+          </ul>         
+          <p>
+            Всю ночь и весь день шел дождь и дул сильный <br>
+            порывистый ветер. 25 октября.  Корабль за ночь разбило <br>
+            в щепки; на том месте, где он стоял, торчат какие-то <br>
+            жалкие обломки,  да и те видны только во время отлива. <br>
+            Весь этот день я хлопотал  около вещей: укрывал и <br>
+            укутывал их, чтобы не испортились от дождя.
+          </p>          
+        </article>                
+      </div>
+{% endblock %}
+
